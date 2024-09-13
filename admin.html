@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Techwave</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: url('https://st2.depositphotos.com/1084193/11423/v/450/depositphotos_114238204-stock-illustration-new-future-technology-concept-abstract.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img {
+            max-height: 60px;
+            vertical-align: middle;
+        }
+
+        header h1 {
+            display: inline;
+            margin-left: 15px;
+            font-size: 2.5rem;
+            color: #4e00cc;
+            vertical-align: middle;
+        }
+
+        .dashboard {
+            margin: 120px auto 50px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            width: 90%;
+            max-width: 1300px;
+        }
+
+        .dashboard-box {
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+            font-size: 1.2rem;
+        }
+
+        .dashboard-box:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.08);
+        }
+
+        .dashboard-box h3 {
+            font-size: 2rem;
+            color: #4e00cc;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-box p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        .applicant-info, .campus-info {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+
+        table, td {
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 12px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .resume-btn {
+            background-color: #4e00cc;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-btn:hover {
+            background-color: #370099;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPgUsGLvE4qzV_zTTG-iDFqdEVn940fm9S7Q&s" alt="Techwave Logo">
+        <h1>TECHWAVE Admin Dashboard</h1>
+    </header>
+
+    <div class="dashboard">
+        <div class="dashboard-box" onclick="location.href='vacancy.html'">
+            <h3>Vacancy Management</h3>
+            <p><h4>Software Developer: 3</h4></p>
+            <p><h4>UI/UX Designer: 2</h4></p>
+            <p><h4>Fashion Designer: 2</h4></p>
+            <p><h4>Data Analyst: 1</h4></p>
+        </div>
+
+        <div class="dashboard-box" onclick="location.href='employee_portal.html'">
+            <h3>Employee Portal</h3>
+            <div class="employee-info">
+                <p><h4>Employee: John</h4></p>
+                <p><h4>Total Days Worked: 30</h4></p>
+                <p><h4>Daily Salary: $100</h4></p>
+                <p><h4>Total Salary Earned: $3000</h4></p>
+                <p><h4>Employee: Rahul</h4></p>
+                <p><h4>Total Days Worked: 25</h4></p>
+                <p><h4>Daily Salary: $80</h4></p>
+                <p><h4>Total Salary Earned: $2500</h4></p>
+            </div>
+        </div>
+
+        <div class="dashboard-box">
+            <h3>Applicant Tracking</h3>
+            <div class="applicant-info">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Software Developer</td>
+                            <td>Shortlisted</td>
+                            <td><a href="john.resume.pdf" target="_blank"><button class="resume-btn">View Resume</button></a></td>
+                        </tr>
+                        <tr>
+                            <td>Rahul</td>
+                            <td>UI/UX Designer</td>
+                            <td>Rejected</td>
+                            <td><a href="rahul.resume.pdf" target="_blank"><button class="resume-btn">View Resume</button></a></td>
+                        </tr>
+                        <tr>
+                            <td>Shweta</td>
+                            <td>Data Analyst</td>
+                            <td>Waiting List</td>
+                            <td><a href="shweta.html.pdf" target="_blank"><button class="resume-btn">View Resume</button></a></td>
+                        </tr>
+                        <tr>
+                            <td>Raj</td>
+                            <td>Fashion Designer</td>
+                            <td>Shortlisted</td>
+                            <td><a href="raj.resume.pdf" target="_blank"><button class="resume-btn">View Resume</button></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dashboard-box" onclick="location.href='campus_recruitment.html'">
+            <h3>Campus Recruitment</h3>
+            <div class="campus-info">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Amity University</td>
+                            <td>September 24, 2024</td>
+                            <td>Software Developer</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Amity University</td>
+                            <td>September 24, 2024</td>
+                            <td>UI/UX Designer</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Chandigarh University</td>
+                            <td>September 28, 2024</td>
+                            <td>Data Analyst</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Chandigarh University</td>
+                            <td>September 28, 2024</td>
+                            <td>Fashion Designer</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Techwave. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
